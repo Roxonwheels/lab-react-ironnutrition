@@ -1,23 +1,24 @@
 import './App.css';
 import foods from './foods.json';
 import { useState } from 'react'
-import FoodBox from './components/FoodBox'
 import { Row, Divider, Button } from "antd";
-import "antd/dist/antd.css";
+import FoodBox from './components/FoodBox'
+import AddFoodForm from './components/AddFoodForm';
 
 
 
 function App() {
-  // const [foodList, setFoodList] = useState(foods)
+  const [foodList, setFoodList] = useState(foods)
  
 
 
   return (
     <div className="App">
-     <h1>Statessss</h1>
+     
 
 
      <Button> Hide Form / Add New Food </Button>
+     <AddFoodForm foodsList={foodList} setFood={setFoodList}  />
 
      <Divider>Food List</Divider>
 
